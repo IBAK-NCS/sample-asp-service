@@ -2,8 +2,6 @@ from ubuntu:latest
 
 WORKDIR backend-svr
 
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
-
 RUN apt-get update && apt-get install -y gnupg2
 
 RUN apt-get update && \
@@ -14,6 +12,8 @@ RUN apt-get update && \
 RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 
 RUN dpkg -i packages-microsoft-prod.deb
+
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 
 RUN add-apt-repository universe
 
