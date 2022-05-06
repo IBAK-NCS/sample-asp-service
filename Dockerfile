@@ -2,6 +2,10 @@ from ubuntu:latest
 
 WORKDIR backend-svr
 
+
+RUN sudo apt-get update -y
+RUN sudo apt-get install -y gnupg2
+
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 
 RUN apt-get update
