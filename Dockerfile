@@ -1,10 +1,9 @@
 from ubuntu:latest
 
 WORKDIR backend-svr
-
+RUN apt-transport-https
 RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 871920D1991BC93C
 
-Run apt-transport-https
 
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
