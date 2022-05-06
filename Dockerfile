@@ -4,6 +4,8 @@ WORKDIR backend-svr
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 
+RUN apt-get update && apt-get install -y gnupg2
+
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
     apt-get install -y wget && \
