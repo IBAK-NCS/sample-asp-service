@@ -2,7 +2,7 @@ from ubuntu:latest
 
 WORKDIR backend-svr
 
-RUN apt-get update && \
+RUN apt-get update || apt-get update \
     apt-get install -y software-properties-common && \
     apt-get install -y wget && \
     rm -rf /var/lib/apt/lists/*
