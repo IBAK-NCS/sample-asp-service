@@ -1,13 +1,11 @@
 from ubuntu:latest
 
 WORKDIR backend-svr
-RUN apt-get install -y apt-transport-https
 
-
-RUN apt-get update && \
-    apt-get install -y software-properties-common && \
-    apt-get install -y wget && \
-    rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && \
+#     apt-get install -y software-properties-common && \
+#     apt-get install -y wget && \
+#     rm -rf /var/lib/apt/lists/*
 
 RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 
