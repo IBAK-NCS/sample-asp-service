@@ -2,10 +2,10 @@ from ubuntu:latest
 
 WORKDIR backend-svr
 
-RUN apt-get update; exit 0 \
-    apt-get install -y software-properties-common && \
-    apt-get install -y wget && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update; exit 0
+RUN apt-get install -y software-properties-common
+RUN apt-get install -y wget 
+RUN rm -rf /var/lib/apt/lists/* 
 
 RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 
