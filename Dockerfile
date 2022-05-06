@@ -17,8 +17,6 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
 
 RUN add-apt-repository universe
 
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 871920D1991BC93C
-
 RUN apt install apt-transport-https -y
 
 RUN apt-get update
