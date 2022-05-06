@@ -2,7 +2,6 @@ from ubuntu:latest
 
 WORKDIR backend-svr
 
-RUN apt-get install -y --no-install-recommends apt-transport-https ca-certificates
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 871920D1991BC93C
 
 RUN apt-get update && \
